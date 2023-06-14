@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu :isVisible="menuVisible" @menu-item-click="closeMenu" />
+    <div :isVisible="menuVisible" @menu-item-click="closeMenu" />
     <header :class="{ 'is--shrink': shrink, 'is--open': menuVisible }">
       <div class="container nav-bar-container">
         <NuxtLink :to="`/`" class="nav-bar-logo">

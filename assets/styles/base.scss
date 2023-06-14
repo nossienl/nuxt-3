@@ -8,3 +8,10 @@ body {
   font-weight: 300;
   padding-top: $nav-bar-height;
 }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  display: block;
+  margin: 10px 0;
+}

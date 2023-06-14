@@ -1,30 +1,34 @@
 <template>
-  <div style="min-height: 200vh">
-    <h1>Welcome to the homepage</h1>
+  <div class="page">
+    <div class="item">
+      <Heading :level="1">Homepage</Heading>
+    </div>
 
-    <NuxtLink :to="`/about`" >
-      About
-    </NuxtLink>
-    <br/><br/>
-    // Button<br/>
-    <AtomButton
-        @click="onClickButton"
-        isSmall
-    >Button</AtomButton>
-    <br/><br/>
-    // Button as nuxt-link<br/>
-    <AtomButton
-        to="/about"
-        rel="next"
-    >Link</AtomButton>
-    <br/><br/>
-    // Button as anchor<br/>
-    <AtomButton
-        href="https://thenextbit.de/en/blog"
-        target="_blank"
-        rel="external"
-    >Link</AtomButton>
-    <br/><br/>
+    <div class="item">
+      <Heading :level="2">Buttons</Heading>
+      <Button
+          @click="onClickButton"
+          isSmall
+      >Button</Button>
+
+
+      <Button
+          to="/search"
+          rel="next"
+      >Search</Button>
+
+      <Button
+          href="https://google.com"
+          target="_blank"
+          rel="external"
+      >Link</Button>
+    </div>
+
+    <div class="item">
+      <Boxes />
+    </div>
+
+
     <span>
       lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </span>
@@ -35,3 +39,21 @@ const onClickButton = () => {
   console.log('button clicked')
 };
 </script>
+
+<style lang="scss">
+.page {
+  width: 100%;
+  min-height: 200vh;
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.item {
+  display: block;
+  margin-bottom: 30px;
+}
+</style>
